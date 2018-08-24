@@ -1,7 +1,7 @@
 # UI-Interview Client
 
 This is the application that you will be extending to demonstrate your development skills using the angular web framework. To receive realtime data from the server, 
-you will need to clone and run this [Application](https://github.com/akshaychand/ui-interview.git). Instructions for running that application are provided in its own README file.
+you will need to clone and run this [Application](https://github.com/mkpcap/ui-interview-server.git). Instructions for running that application are provided in its own README file.
 
 For your convenience, we have provided you with an angular service that subscribes to the data published by the server. Your assignment is to extend this service so that it 
 uses Observables to subscribe to this data and render it on a UI Component that you will be building. 
