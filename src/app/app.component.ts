@@ -16,7 +16,10 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.mockDataService.subscribe('mockData');
+    const streamOfData = this.mockDataService.subscribe('mockData');
+    streamOfData.subscribe(data => {
+      console.log('here is the mock data haha from tony wiring', data);
+    });
   }
 
   ngOnDestroy(): void {
