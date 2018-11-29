@@ -17,6 +17,8 @@ export class MockDataService {
     port: 8000
   };
 
+  private dataSet = [];
+
   constructor() {
 
     this.sc = socketCluster.connect(this.options);
@@ -48,7 +50,10 @@ export class MockDataService {
 
     this.channel.watch((data) => {
       // console.log('Mock Data Received: ' + JSON.stringify(data));
-      subject.next(JSON.stringify(data));
+      // const mockData = JSON.stringify(data);
+      // this.dataSet = [...this.dataSet, ...data];
+      // subject.next(this.dataSet);
+      subject.next(data);
     });
     return observable;
 
