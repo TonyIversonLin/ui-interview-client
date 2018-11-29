@@ -1,4 +1,5 @@
 import { OnDestroy, OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
+import {MatPaginator, MatTableDataSource} from '@angular/material';
 
 import { Component } from '@angular/core';
 import { MockDataService } from './mock-data/mock-data.service';
@@ -11,6 +12,7 @@ import { MockDataService } from './mock-data/mock-data.service';
 export class AppComponent implements OnInit, OnDestroy {
 
   title = 'Mock Funds';
+  displayedColumns: string[] = ['fundName', 'pnl', 'cumulativePnl', 'return'];
 
   constructor(private mockDataService: MockDataService) {
   }
@@ -25,5 +27,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.mockDataService.unsubscribe();
   }
+
+
 
 }
