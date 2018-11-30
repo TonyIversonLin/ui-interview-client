@@ -11,8 +11,8 @@
 </pre> -->
 <mat-toolbar [ngClass]="{'dark-theme': themeStatus}">
   <h2 id="logo"><span>MKP DEMO</span></h2>
-  <span (click)="toggle()">light</span>
-  <span (click)="toggle()">dark</span>
+  <span (click)="toggle()" id="light-theme-trigger">light</span>
+  <span (click)="toggle()" id="dark-theme-trigger">dark</span>
 </mat-toolbar>
 
 <mat-sidenav-container [ngClass]="{'dark-theme': themeStatus}">

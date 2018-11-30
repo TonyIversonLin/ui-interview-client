@@ -5,7 +5,31 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getAppNameText() {
+    return element(by.css('app-root mat-toolbar h2 span')).getText();
+  }
+
+  getRealTimeTable() {
+    return element(by.css('app-root app-summary-table'));
+  }
+
+  getRealTimeLineChart() {
+    return element(by.css('app-root app-line-chart'));
+  }
+
+  getTopHeader() {
+    return element(by.css('app-root mat-toolbar'));
+  }
+
+  getMainContainer() {
+    return element(by.css('app-root mat-sidenav-container'));
+  }
+
+  getDarkThemeClicker() {
+    return element(by.css('app-root #dark-theme-trigger'));
+  }
+
+  getLightThemeClicker() {
+    return element(by.css('app-root #light-theme-trigger'));
   }
 }
