@@ -1,5 +1,5 @@
-<p>
-  <!-- Replace this content here with your component -->
+<!-- <p>
+  Replace this content here with your component
   Replace this content with your component(s)
 </p>
 <pre>
@@ -8,4 +8,26 @@
     1. Show off your CSS/SCSS/LESS skills.
     2. Add any data viz. tool to render the data (linecharts, etc.).
     3. Make this run as a docker container. 
-</pre>
+</pre> -->
+<mat-toolbar [ngClass]="{'dark-theme': themeStatus}">
+  <h2 id="logo"><span>MKP DEMO</span></h2>
+  <span (click)="toggle()" id="light-theme-trigger">light</span>
+  <span (click)="toggle()" id="dark-theme-trigger">dark</span>
+</mat-toolbar>
+
+<mat-sidenav-container [ngClass]="{'dark-theme': themeStatus}">
+  <mat-sidenav mode="side" opened>
+    <a>Dash Board</a>
+  </mat-sidenav>
+
+  <mat-sidenav-content fxLayout="column" fxLayoutAlign=" center" fxFlex>
+      <app-summary-table fxFlex="50"></app-summary-table>
+      <mat-tab-group fxFlex='50'>
+        <mat-tab label="Pnl"><app-line-chart [property]="'pnl'" [title]="'Pnl'"></app-line-chart></mat-tab>
+        <mat-tab label="Cumulative Pnl"><app-line-chart [property]="'cumulativePnl'" [title]="'Cumulative Pnl'"></app-line-chart></mat-tab>
+        <mat-tab label="Return"><app-line-chart [property]="'return'" [title]="'Return'"></app-line-chart></mat-tab>
+      </mat-tab-group>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+

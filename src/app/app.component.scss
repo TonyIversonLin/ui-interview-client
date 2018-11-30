@@ -1,0 +1,65 @@
+$dark-blue: #1c2325;
+$border-grey: #80808054;
+$shadow-grey: #8080804a;
+$logo-background: #2D6495;
+
+// theme specific color
+$white-theme-background: #8080801a;
+
+
+mat-toolbar {
+  border-bottom: 1px $border-grey solid;
+  position: fixed;
+  z-index: 10;
+  padding: 0;
+  > span {
+    color: black;
+    margin: 0 2rem; 
+    opacity: 0.9;
+    cursor: pointer;
+  }
+}
+
+mat-sidenav-container {
+  height: 100vh;
+  padding-top: 4rem;
+  background: $white-theme-background;
+  mat-sidenav {
+    width: 13vw;
+    text-align: center;
+    margin-top: 3.7rem;
+    padding-top: 2rem;
+    background: $dark-blue;
+    a {
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+mat-sidenav-content {
+  width: 87vw;
+  padding: 1rem;
+  box-sizing: border-box;
+  mat-tab-group {
+    padding: 1rem;
+    box-shadow: 1px 1px 1px $shadow-grey;
+    background: white;
+  }
+}
+
+#logo {
+  width: 13%;
+  height: 100%;
+  text-align: center;
+  background: $logo-background;
+  color: white;
+  font-style: italic;
+  position: relative;
+  span {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.7;
+  }
+}

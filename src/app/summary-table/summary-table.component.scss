@@ -1,0 +1,15 @@
+mat-table {
+  height: 30%;
+  padding: 0.5rem 1rem;
+  box-shadow: 1px 1px 1px #8080804a;
+  margin-bottom: 1rem;
+  background: white;
+
+  mat-header-row {
+    opacity: 0.5;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+}

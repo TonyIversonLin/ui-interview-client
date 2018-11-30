@@ -1,26 +1,21 @@
 import { OnDestroy, OnInit } from '@angular/core/src/metadata/lifecycle_hooks';
-
 import { Component } from '@angular/core';
-import { MockDataService } from './mock-data/mock-data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  title = 'Mock Funds';
+  themeStatus = false;
 
-  constructor(private mockDataService: MockDataService) {
+  constructor() {}
+
+  ngOnInit(): void { }
+
+  toggle(): void {
+    this.themeStatus = !this.themeStatus;
   }
-
-  ngOnInit(): void {
-    this.mockDataService.subscribe('mockData');
-  }
-
-  ngOnDestroy(): void {
-    this.mockDataService.unsubscribe();
-  }
-
+  ngOnDestroy(): void {}
 }
