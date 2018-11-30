@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LineChartComponent } from './line-chart.component';
+import { SharedModule } from '../shared.module';
+import { MockDataModule } from '../mock-data/mock-data.module';
 
 describe('LineChartComponent', () => {
   let component: LineChartComponent;
@@ -8,7 +10,8 @@ describe('LineChartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LineChartComponent ]
+      imports: [SharedModule, MockDataModule],
+      declarations: [ LineChartComponent ],
     })
     .compileComponents();
   }));

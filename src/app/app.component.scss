@@ -25,7 +25,7 @@ mat-sidenav-container {
   padding-top: 4rem;
   background: $white-theme-background;
   mat-sidenav {
-    width: 15vw;
+    width: 13vw;
     text-align: center;
     margin-top: 3.7rem;
     padding-top: 2rem;
@@ -38,7 +38,7 @@ mat-sidenav-container {
 }
 
 mat-sidenav-content {
-  width: 85vw;
+  width: 87vw;
   padding: 1rem;
   box-sizing: border-box;
   mat-tab-group {
@@ -49,7 +49,7 @@ mat-sidenav-content {
 }
 
 #logo {
-  width: 15%;
+  width: 13%;
   height: 100%;
   text-align: center;
   background: $logo-background;
