@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule, MatCheckboxModule, MatTableModule, MatTabsModule } from '@angular/material';
+import { MatButtonModule, MatCheckboxModule, MatTableModule, MatTabsModule, MatToolbarModule, MatSidenavModule } from '@angular/material';
 import { ChartModule } from 'angular-highcharts';
 
 @NgModule({
@@ -10,7 +10,9 @@ import { ChartModule } from 'angular-highcharts';
     MatCheckboxModule,
     MatTableModule,
     ChartModule,
-    MatTabsModule
+    MatTabsModule,
+    MatToolbarModule,
+    MatSidenavModule
   ],
   exports: [
     CommonModule,
@@ -18,7 +20,9 @@ import { ChartModule } from 'angular-highcharts';
     MatCheckboxModule,
     MatTableModule,
     ChartModule,
-    MatTabsModule
+    MatTabsModule,
+    MatToolbarModule,
+    MatSidenavModule
   ],
   declarations: []
 })

@@ -5,7 +5,7 @@ import { RealTimeDataSource } from '../utility';
 @Component({
   selector: 'app-summary-table',
   templateUrl: './summary-table.component.html',
-  styleUrls: ['./summary-table.component.css']
+  styleUrls: ['./summary-table.component.scss']
 })
 export class SummaryTableComponent implements OnInit, OnDestroy {
 
