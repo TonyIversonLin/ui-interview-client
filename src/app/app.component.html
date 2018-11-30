@@ -1,4 +1,4 @@
-<p>
+<!-- <p>
   Replace this content here with your component
   Replace this content with your component(s)
 </p>
@@ -10,28 +10,14 @@
     3. Make this run as a docker container. 
 </pre> -->
 
-<mat-table mat-table [dataSource]="dataSource">
-  <ng-container matColumnDef="fundName">
-    <mat-header-cell *matHeaderCellDef> fund Name </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.fundName}} </mat-cell>
-  </ng-container>
+<app-summary-table></app-summary-table>
 
-  <ng-container matColumnDef="pnl">
-    <mat-header-cell *matHeaderCellDef> Pnl </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.pnl}} </mat-cell>
-  </ng-container>
+<mat-tab-group>
+  <mat-tab label="Pnl"><app-line-chart [property]="'pnl'" [title]="'Pnl'"></app-line-chart></mat-tab>
+  <mat-tab label="Cumulative Pnl"><app-line-chart [property]="'cumulativePnl'" [title]="'Cumulative Pnl'"></app-line-chart></mat-tab>
+  <mat-tab label="Return"><app-line-chart [property]="'return'" [title]="'Return'"></app-line-chart></mat-tab>
+</mat-tab-group>
 
-  <ng-container matColumnDef="cumulativePnl">
-    <mat-header-cell *matHeaderCellDef> Cumulative Pnl </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.cumulativePnl}} </mat-cell>
-  </ng-container>
 
-  <ng-container matColumnDef="return">
-    <mat-header-cell *matHeaderCellDef> Return </mat-header-cell>
-    <mat-cell *matCellDef="let element"> {{element.return}} </mat-cell>
-  </ng-container>
 
-  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-</mat-table>
 

@@ -3,6 +3,7 @@ import * as socketCluster from 'socketcluster-client';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
+import { MockData } from './mock-data.model';
 
 @Injectable()
 export class MockDataService {
@@ -34,7 +35,7 @@ export class MockDataService {
     });
   }
 
-  public subscribe(channelName: string): Observable<any> {
+  public subscribe(channelName: string) {
     const subject = new Subject();
     const observable = subject.asObservable();
 

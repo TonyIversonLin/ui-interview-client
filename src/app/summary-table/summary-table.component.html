@@ -1,0 +1,24 @@
+<mat-table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="fundName">
+      <mat-header-cell *matHeaderCellDef> fund Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.fundName}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="pnl">
+      <mat-header-cell *matHeaderCellDef> Pnl </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.pnl}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="cumulativePnl">
+      <mat-header-cell *matHeaderCellDef> Cumulative Pnl </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.cumulativePnl}} </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="return">
+      <mat-header-cell *matHeaderCellDef> Return </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.return}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
