@@ -3,6 +3,7 @@ import { browser, element, by } from 'protractor';
 
 // ****************************************************
 // Notice: please run the test on node version v8.9.0 *
+// You can swith node version by using nvm use v8.9.0 *
 // ****************************************************
 
 describe('ui-interview-client App', () => {
