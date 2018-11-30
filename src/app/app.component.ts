@@ -8,9 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
+  themeStatus = false;
+
   constructor() {}
 
   ngOnInit(): void { }
 
+  toggle(): void {
+    this.themeStatus = !this.themeStatus;
+  }
   ngOnDestroy(): void {}
 }

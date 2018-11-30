@@ -48,3 +48,39 @@ a {
 .mat-header-row, .mat-row {
   border-color: $table-border-grey;
 }
+
+
+// theme section -------------------------------------------
+
+mat-sidenav-container.dark-theme {
+  background-image: radial-gradient(farthest-side at 0% 0%,#5C6E87, #182542) !important;
+  app-summary-table {
+    mat-table {
+      color: white;
+      background: #1E2D3B;
+      box-shadow: 1px 1px 10px 1px #00000052;
+    }
+  }
+
+
+
+  .mat-tab-group {
+    color: white;
+    background: #1E2D3B !important;
+    box-shadow: 1px 1px 10px 1px #00000052 !important;
+    tspan {
+      fill: white;
+    }
+    .highcharts-grid-line {
+      opacity: 0.3;
+    }
+  }
+
+  .highcharts-background {
+    fill: #1E2D3B;
+  }
+}
+
+mat-toolbar.dark-theme > span {
+  color: white !important;
+}
